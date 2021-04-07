@@ -1,3 +1,9 @@
+
+/*
+https://nrf24.github.io/RF24/RPi.html
+https://nrf24.github.io/RF24/Linux.html
+*/
+
 #include <RF24/RF24.h>
 #include <RF24Network/RF24Network.h>
 #include <iostream>
