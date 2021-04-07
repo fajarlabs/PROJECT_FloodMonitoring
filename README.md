@@ -2,4 +2,4 @@
 Flood Project
 
 # diagram
-<img src="https://ibb.co/XJTqWm4" />
+<img src="https://i.ibb.co/dKyRfnc/signal.png" />
