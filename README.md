@@ -19,11 +19,11 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 <img src="https://i.ibb.co/P5kdKCw/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0">
 
 # Gallery
-[url=https://ibb.co/ZThxwBh][img]https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg[/img][/url]
-[url=https://ibb.co/5kkXwnh][img]https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg[/img][/url]
-[url=https://ibb.co/6N7hYCB][img]https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg[/img][/url]
-[url=https://ibb.co/LtNGv5q][img]https://i.ibb.co/J73hCQb/SENSOR-FLOAT.jpg[/img][/url]
-[url=https://ibb.co/VjVSBYx][img]https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg[/img][/url]
-[url=https://ibb.co/VjVSBYx][img]https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg[/img][/url]
-[url=https://ibb.co/Tg5G1qY][img]https://i.ibb.co/P68yMzF/SENSOR-FLOAT4.jpg[/img][/url]
-[url=https://ibb.co/dKSzn1m][img]https://i.ibb.co/pXg9CGh/SENSOR-FLOAT5.jpg[/img][/url]
+<img src="https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg" />
+<img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
+<img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
+<img src="https://i.ibb.co/J73hCQb/SENSOR-FLOAT.jpg" />
+<img src="https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg" />
+<img src="https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg" />
+<img src="https://i.ibb.co/P68yMzF/SENSOR-FLOAT4.jpg" />
+<img src="https://i.ibb.co/pXg9CGh/SENSOR-FLOAT5.jpg" />
