@@ -5,7 +5,7 @@ Flood Project
 <img src="https://i.ibb.co/dKyRfnc/signal.png" />
 
 # Payload<br />
-  serial_number: Serial Number Device<br />
-  data : Data device<br />
-  req : Request client to receiver<br />
-  batt : Battery level<br />
+  <b>serial_number</b> : Serial Number Device<br />
+  <b>data</b> : Data device<br />
+  <b>req</b> : Request client to receiver<br />
+  <b>batt</b> : Battery level<br />
