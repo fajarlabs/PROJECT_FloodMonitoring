@@ -22,6 +22,7 @@ struct payload_t {                   // Structure of our payload
   unsigned long sn;
   unsigned long data;
   unsigned long req;
+  double batt;
 };
 
 void setup(void) {
@@ -70,7 +71,9 @@ void loop() {
     msg.toCharArray(dataToSend, msg_len);
     */
     long data = 1; // data ON (trigger flood)
-    payload_t payload = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT };
+    // get current voltage
+    double curvolt = double( readVcc() ) / 1000;
+    payload_t payload = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT, curvolt };
     RF24NetworkHeader header(/*to node*/ node01);
     if(network.write(header, &payload, sizeof(payload))){
       Serial.println("<<TRANSMIT>>");
@@ -81,4 +84,18 @@ void loop() {
     // deep sleep in 8 seconds
     LowPower.idle(SLEEP_8S, ADC_OFF, TIMER2_OFF, TIMER1_OFF, TIMER0_OFF, SPI_OFF, USART0_OFF, TWI_OFF);
   }
+}
+
+//read internal voltage
+long readVcc() {
+  long result;
+  // Read 1.1V reference against AVcc
+  ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  delay(2); // Wait for Vref to settle
+  ADCSRA |= _BV(ADSC); // Convert
+  while (bit_is_set(ADCSRA, ADSC));
+  result = ADCL;
+  result |= ADCH << 8;
+  result = 1126400L / result; // Back-calculate AVcc in mV
+  return result;
 }

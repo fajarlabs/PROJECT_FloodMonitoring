@@ -20,6 +20,7 @@ struct payload_t {              // Structure of our payload
   unsigned long sn;
   unsigned long data;
   unsigned long req;   // if '1' is transmit to other client & if '0' only receive
+  double batt;
 };
 
 void setup(void) {
@@ -42,6 +43,8 @@ void setup(void) {
 void loop(void) {
   network.update();                  // Check the network regularly
   unsigned long now = millis();
+  
+  //===== Receiving =====//
   while (network.available()) {      // Is there anything ready for us?
     RF24NetworkHeader header;        // If so, grab it and print it out
     payload_t payload;
@@ -50,13 +53,17 @@ void loop(void) {
     Serial.println(payload.sn);
     Serial.println(payload.data);
     Serial.println(payload.req);
+    Serial.println(payload.batt);
   }
 
+  //===== Sending =====//
+  // if request == 1 is transmit 
   if (now - last_sent >= interval) {
     last_sent = now;
-    //===== Sending =====//
     long data = 12345; // solar data
-    payload_t payload2 = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT };
+    // get current voltage
+    double curvolt = double( readVcc() ) / 1000;
+    payload_t payload2 = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT, curvolt };
     RF24NetworkHeader header2(node01);     // (Address where the data is going)
     if(network.write(header2, &payload2, sizeof(payload2))) {
       Serial.println("<<Transmit>>");
@@ -64,4 +71,18 @@ void loop(void) {
       Serial.println("<<Failed>>");
     }
   }
+}
+
+//read internal voltage
+long readVcc() {
+  long result;
+  // Read 1.1V reference against AVcc
+  ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+  delay(2); // Wait for Vref to settle
+  ADCSRA |= _BV(ADSC); // Convert
+  while (bit_is_set(ADCSRA, ADSC));
+  result = ADCL;
+  result |= ADCH << 8;
+  result = 1126400L / result; // Back-calculate AVcc in mV
+  return result;
 }
