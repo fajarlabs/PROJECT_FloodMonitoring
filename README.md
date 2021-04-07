@@ -1,5 +1,5 @@
 # Project01
-Flood Project
+The project made a simple flood monitoring system using a buoy sensor and radio nrf24l01
 
 # Diagram
 <img src="https://i.ibb.co/5j3hp6h/signal.png" alt="signal" border="0"/>
