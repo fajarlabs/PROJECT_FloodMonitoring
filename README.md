@@ -1,5 +1,5 @@
-# project01
+# Project01
 Flood Project
 
-# diagram
+# Diagram
 <img src="https://i.ibb.co/dKyRfnc/signal.png" />
