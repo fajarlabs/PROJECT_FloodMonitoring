@@ -1,12 +1,13 @@
 #include <SPI.h>
 #include <RF24.h>
 #include <RF24Network.h>
+#define RELAYPIN 9
 
 RF24 radio(7, 8);               // nRF24L01(+) radio attached using Getting Started board
 
 RF24Network network(radio);     // Network uses that radio
-const uint16_t this_node = 00;  // Address of our node in Octal format (04, 031, etc)
-const uint16_t node01 = 01;    // Address of the other node in Octal format
+const uint16_t this_node = 02;  // Address of our node in Octal format (04, 031, etc)
+const uint16_t node01 = 00;    // Address of the other node in Octal format
 
 const unsigned long interval = 2000; // How often (in ms) to send 'hello world' to the other unit
 unsigned long last_sent;             // When did we last send?
@@ -23,7 +24,14 @@ struct payload_t {              // Structure of our payload
   double batt;
 };
 
+typedef struct global_t {
+  bool isRelayON = false;
+} Global;
+
+Global global; 
+
 void setup(void) {
+  pinMode(RELAYPIN, OUTPUT); // relay for trigger
   Serial.begin(9600);
   if (!Serial) {
     // some boards need this because of native USB capability
@@ -54,7 +62,22 @@ void loop(void) {
     Serial.println(payload.data);
     Serial.println(payload.req);
     Serial.println(payload.batt);
+    if(payload.data == 1) {
+      Serial.println("<<TriggerON>>");
+      digitalWrite(RELAYPIN, HIGH);
+      global.isRelayON = true;
+    }
+    if(payload.data == 2) {
+      Serial.println("<<TriggerOFF>>");
+      digitalWrite(RELAYPIN, LOW);
+      global.isRelayON = false;
+    }
   }
+
+  if(global.isRelayON)
+    digitalWrite(RELAYPIN, HIGH);
+  else
+    digitalWrite(RELAYPIN, LOW);
 
   //===== Sending =====//
   // if request == 1 is transmit 
