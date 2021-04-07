@@ -7,6 +7,9 @@ Flood Project
 # Sketch Node Sensor
 <img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
 
+# Sketch Node Panel Controller
+<img src="https://i.ibb.co/P5kdKCw/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0">
+
 # Payload<br />
   <b>serial_number</b> : Serial Number Device<br />
   <b>data</b> : Data device<br />
