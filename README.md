@@ -18,10 +18,12 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 # Sketch Node Panel Controller
 <img src="https://i.ibb.co/P5kdKCw/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0">
 
-# Gallery
+# Box Panel Controller
 <img src="https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg" />
 <img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
 <img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
+
+# Float Sensor
 <img src="https://i.ibb.co/J73hCQb/SENSOR-FLOAT.jpg" />
 <img src="https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg" />
 <img src="https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg" />
