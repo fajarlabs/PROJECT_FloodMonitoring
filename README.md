@@ -30,10 +30,12 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 <img src="https://i.ibb.co/P68yMzF/SENSOR-FLOAT4.jpg" />
 <img src="https://i.ibb.co/pXg9CGh/SENSOR-FLOAT5.jpg" />
 
-# Sensor solar untuk cek ketersediaan bbm, bukan volume karena bukan time analog dan perlu kalibrasi dengan panjang, lebar, tinggi
+# Sensor solar 
+Untuk cek ketersediaan bbm, bukan volume karena bukan time analog dan perlu kalibrasi dengan panjang, lebar, tinggi<br />
 <a href="https://ibb.co/xgt35PT"><img src="https://i.ibb.co/7pdby8m/Whats-App-Image-2021-04-11-at-10-44-52-PM.jpg" alt="Whats-App-Image-2021-04-11-at-10-44-52-PM" border="0"></a>
 <a href="https://ibb.co/Pr9xSyZ"><img src="https://i.ibb.co/ZfYdZr6/Whats-App-Image-2021-04-11-at-10-45-48-PM.jpg" alt="Whats-App-Image-2021-04-11-at-10-45-48-PM" border="0"></a>
 <a href="https://ibb.co/q9xj9Hf"><img src="https://i.ibb.co/K7mh7tk/Whats-App-Image-2021-04-11-at-10-45-41-PM.jpg" alt="Whats-App-Image-2021-04-11-at-10-45-41-PM" border="0"></a>
 
-# Core control RS232 dan retrieve dan command dari sini
+# Core control RS232 
+Retrieve dan command dari sini <br />
 <a href="https://ibb.co/fx5VGBT"><img src="https://i.ibb.co/XCgfkNG/Whats-App-Image-2021-04-11-at-10-38-35-PM.jpg" alt="Whats-App-Image-2021-04-11-at-10-38-35-PM" border="0"></a>
