@@ -14,9 +14,9 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 # Serial<br />
 <h2>Receive data from Serial Data</h2>
 
-`````
-<<DATA1002~0~0~5.44>>
-`````
+Dibawah ini adalah bentuk format serial data yang diterima dari radio<br />
+`````<<DATA1002~0~0~5.44>>`````<br />
+Format data seperti dibawah ini : <br />
 <b>1002</b> : Serial number <br />
 <b>0</b> : data <br />
 <b>0</b> : request / command <br />
