@@ -10,7 +10,8 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 # Diagram
 <img src="https://i.ibb.co/5j3hp6h/signal.png" alt="signal" border="0"/>
 
-# Diagram
+# Serial
+<a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
 
 # Sketch Node Sensor
 <img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
