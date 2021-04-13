@@ -7,7 +7,7 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 # Raspberry PI<br />
 Scan IP pakai "advanced ip Scanner" atau tools scan lainnya untuk mencari IP dari raspberry pi<br />
 Lalu silahkan masuk melalui SSH / putty<br />
-<b>SSH<b></br>
+<b>SSH</b></br>
 User : pi<br />
 Pass : raspberry<br />
 Lokasi script python ada di direktori : ````` /home/pi/Documents ````` <br />
