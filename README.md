@@ -13,11 +13,13 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 
 # Serial<br />
 <h2>Receive data from Serial Data</h2>
+<p><code>
 <<DATA1002~0~0~5.44>><br/>
 <b>1002</b> : Serial number <br />
 <b>0</b> : data <br />
 <b>0</b> : request / command <br />
 <b>5.44</b> : battery level <br />
+</code></p>
 
 <h2>Receive Data Format</h2>
 <<CMD[node]~[command]~[data]>>
