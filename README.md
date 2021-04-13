@@ -14,7 +14,7 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 # Serial<br />
 <h2>Receive data from Serial Data</h2>
 
-`````<<DATA1002~0~0~5.44>><br/>`````
+`````<<DATA1002~0~0~5.44>>`````
 <b>1002</b> : Serial number <br />
 <b>0</b> : data <br />
 <b>0</b> : request / command <br />
@@ -24,11 +24,11 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 `````
 <<CMD[node]~[command]~[data]>>
 
-<b><<CMD02~0~0>></b> <-------- perintah untuk testping serial untuk menyalakan buzzer
+<<CMD02~0~0>> <-------- perintah untuk testping serial untuk menyalakan buzzer
 
 Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : 
 
-<b><<CMD02~1~1>></b> <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio
+<<CMD02~1~1>> <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio
 
 Contoh perintah untuk mematikan untuk menghidupkan relay panel
 <<CMD02~1~1>> <----- ON 
