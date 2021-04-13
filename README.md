@@ -26,7 +26,10 @@ Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 `````<<CMD02~1~1>>````` <----- ON <br />
 `````<<CMD02~1~2>>````` <----- OFF<br />
 
+<h2>Arduino IDE serial monitor</h2>
 <a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
+<h2>Python CMD Windows</h2>
+<a href="https://ibb.co/3f0XVs3"><img src="https://i.ibb.co/4sjyCfq/python.png" alt="python" border="0"></a>
 
 # Sketch Node Sensor
 <img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
