@@ -32,7 +32,7 @@ Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 <img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
 
 # Sketch Node Panel Controller
-<img src="https://i.ibb.co/P5kdKCw/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0">
+<a href="https://ibb.co/rQQ8p9z"><img src="https://i.ibb.co/Jcc6pZG/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0"></a>
 
 # Box Panel Controller
 <img src="https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg" />
