@@ -29,7 +29,10 @@ Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 <h2>Arduino IDE serial monitor</h2>
 <a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
 <h2>Python CMD Windows</h2>
+To run script with command prompt : <b>python piGateway.py</b><br />
 <a href="https://ibb.co/3f0XVs3"><img src="https://i.ibb.co/4sjyCfq/python.png" alt="python" border="0"></a>
+<h2>Records DB (PostgreSQL)</h2>
+<a href="https://ibb.co/6Ww6cQS"><img src="https://i.ibb.co/CH8xpLy/DB-PREVIEW.png" alt="DB-PREVIEW" border="0"></a>
 
 # Sketch Node Sensor
 <img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
