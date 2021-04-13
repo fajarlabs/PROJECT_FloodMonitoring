@@ -3,20 +3,18 @@
 #include <RF24Network.h>
 #include "LowPower.h"
 
+#define SERIAL_NUMBER 1001
+#define CMD 0                        // do something with command
+
 RF24 radio(7, 8);                    // nRF24L01(+) radio attached using Getting Started board
 RF24Network network(radio);          // Network uses that radio
 
-const uint16_t node01 = 00;         // Address of our node in Octal format
+const uint16_t node01 = 00;          // Address of our node in Octal format
 const uint16_t this_node = 01;       // Address of the other node in Octal format
 
 const unsigned long interval = 2000; // How often (in ms) to send 'hello world' to the other unit
 unsigned long last_sent;             // When did we last send?
 unsigned long packets_sent;          // How many have we sent already
-
-// Serial number
-const int SERIAL_NUMBER = 1001;
-// Request, if '1' transmit to other client, if '0' only receive data
-const int REQUEST_FOR_CLIENT = 1;
 
 struct payload_t {                   // Structure of our payload
   unsigned long sn;
@@ -45,35 +43,15 @@ void setup(void) {
 void loop() {
   network.update(); // Check the network regularly
   unsigned long now = millis();
-
-  /*
-  while (network.available()) {      // Is there anything ready for us?
-    RF24NetworkHeader header;        // If so, grab it and print it out
-    payload_t payload;
-    network.read(header, &payload, sizeof(payload));
-    Serial.println("Received packet #");
-    Serial.println(payload.sn);
-    Serial.println(payload.data);
-    Serial.println(payload.req);
-  }
-  */
   
   // If it's time to send a message, send it!
   if (now - last_sent >= interval) {
     last_sent = now;
-    /*
-    // set format data to transmit
-    String msg = formatData("1");
-    int msg_len = msg.length() + 1; 
-    // Prepare the character array (the buffer) 
-    char dataToSend[msg_len];
-    // Copy it over 
-    msg.toCharArray(dataToSend, msg_len);
-    */
+
     long data = 1; // data ON (trigger flood)
     // get current voltage
     double curvolt = double( readVcc() ) / 1000;
-    payload_t payload = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT, curvolt };
+    payload_t payload = { SERIAL_NUMBER, data, CMD, curvolt };
     RF24NetworkHeader header(/*to node*/ node01);
     if(network.write(header, &payload, sizeof(payload))){
       Serial.println("<<TRANSMIT>>");

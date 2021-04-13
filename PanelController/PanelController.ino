@@ -2,6 +2,9 @@
 #include <RF24.h>
 #include <RF24Network.h>
 #define RELAYPIN 9
+#define FUELPIN 6
+#define CMD 0
+#define SERIAL_NUMBER 1002
 
 RF24 radio(7, 8);               // nRF24L01(+) radio attached using Getting Started board
 
@@ -12,16 +15,17 @@ const uint16_t node01 = 00;    // Address of the other node in Octal format
 const unsigned long interval = 2000; // How often (in ms) to send 'hello world' to the other unit
 unsigned long last_sent;             // When did we last send?
 
-// Serial number
-const int SERIAL_NUMBER = 1002;
-// Request, if '1' transmit to other client, if '0' only receive data
-const int REQUEST_FOR_CLIENT = 0;
-
-struct payload_t {              // Structure of our payload
+struct payload_t { 
   unsigned long sn;
   unsigned long data;
-  unsigned long req;   // if '1' is transmit to other client & if '0' only receive
+  unsigned long req;   
   double batt;
+};
+
+struct packet_t { 
+  uint16_t node;
+  int cmd;
+  unsigned long data;
 };
 
 typedef struct global_t {
@@ -32,6 +36,7 @@ Global global;
 
 void setup(void) {
   pinMode(RELAYPIN, OUTPUT); // relay for trigger
+  pinMode(FUELPIN, INPUT);   // fuel input
   Serial.begin(9600);
   if (!Serial) {
     // some boards need this because of native USB capability
@@ -57,11 +62,13 @@ void loop(void) {
     RF24NetworkHeader header;        // If so, grab it and print it out
     payload_t payload;
     network.read(header, &payload, sizeof(payload));
+    /*
     Serial.println("Received packet #");
     Serial.println(payload.sn);
     Serial.println(payload.data);
     Serial.println(payload.req);
     Serial.println(payload.batt);
+    */
     if(payload.data == 1) {
       Serial.println("<<TriggerON>>");
       digitalWrite(RELAYPIN, HIGH);
@@ -83,10 +90,11 @@ void loop(void) {
   // if request == 1 is transmit 
   if (now - last_sent >= interval) {
     last_sent = now;
-    long data = 12345; // solar data
+    int fuelExist = 0;
+    if(digitalRead(FUELPIN) == HIGH) fuelExist = 1;
     // get current voltage
     double curvolt = double( readVcc() ) / 1000;
-    payload_t payload2 = { SERIAL_NUMBER, data, REQUEST_FOR_CLIENT, curvolt };
+    payload_t payload2 = { SERIAL_NUMBER, fuelExist, CMD, curvolt };
     RF24NetworkHeader header2(node01);     // (Address where the data is going)
     if(network.write(header2, &payload2, sizeof(payload2))) {
       Serial.println("<<Transmit>>");
