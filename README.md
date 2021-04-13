@@ -13,7 +13,7 @@ Pass : raspberry<br />
 Lokasi script python ada di direktori : ````` /home/pi/Documents ````` <br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/pxky859/PATH-FILE-SCRIPT-PYTHON.png" alt="PATH-FILE-SCRIPT-PYTHON" border="0"></a><br />
 Cara menjalankan script ptyhonnya secara manual seperti berikut ini : <br />````` pi@raspberrypi:~/Documents $ python3 piGateway.py ````` <br />
-Untuk autoRUN script agar ketika restart raspberry-pinya langsung bisa aktif menggunakan PM2<br />
+Untuk autoRUN script agar ketika restart raspberrypi-nya bisa langsung aktif menggunakan PM2<br />
 Cara menjalankannya perintahnya berikut ini :  <br />````` pm2 start 0  ````` <br />dan untuk mematikan autoRUNnya bisa menggunakan perintah ini : <br />````` pm2 stop 0  ````` <br />
 <a href="https://ibb.co/MpYBygm"><img src="https://i.ibb.co/Qn2D7J4/pm2.png" alt="pm2" border="0"></a>
   <br /><br />
