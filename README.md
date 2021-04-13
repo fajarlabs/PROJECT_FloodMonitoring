@@ -1,12 +1,5 @@
 # Project01
 The project made a simple flood monitoring system using a buoy sensor and radio nrf24l01
-
-# Payload<br />
-  <h2>Format Transmition</h2>
-  <b>serial_number</b> : Serial number device<br />
-  <b>data</b> : Data value sensor<br />
-  <b>req</b> : Request client to receiver<br />
-  <b>batt</b> : Battery level<br /><br />
   
 # Diagram
 <img src="https://i.ibb.co/5j3hp6h/signal.png" alt="signal" border="0"/>
