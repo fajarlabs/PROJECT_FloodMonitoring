@@ -29,7 +29,7 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : <br />
 `````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio<br />
 
-Contoh perintah untuk mematikan untuk menghidupkan relay panel
+Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 `````<<CMD02~1~1>>````` <----- ON <br />
 `````<<CMD02~1~2>>````` <----- OFF<br />
 
