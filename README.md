@@ -61,6 +61,8 @@ Retrieve dan command dari sini <br />
 
 <a href="https://ibb.co/R9BkKkW"><img src="https://i.ibb.co/VtQcGc8/Whats-App-Image-2021-04-12-at-12-04-18-AM.jpg" alt="Whats-App-Image-2021-04-12-at-12-04-18-AM" border="0"></a>
 
-<a href="https://ibb.co/0DzcRdz"><img src="https://i.ibb.co/K08Xp38/Whats-App-Image-2021-04-13-at-5-51-59-PM.jpg" alt="Whats-App-Image-2021-04-13-at-5-51-59-PM" border="0"></a><br /><a target='_blank' href='https://id.imgbb.com/'>aplikasi free share</a><br />
+<a href="https://ibb.co/0DzcRdz"><img src="https://i.ibb.co/K08Xp38/Whats-App-Image-2021-04-13-at-5-51-59-PM.jpg" alt="Whats-App-Image-2021-04-13-at-5-51-59-PM" border="0"></a><br />
 
-<a href="https://ibb.co/DgNR2WH"><img src="https://i.ibb.co/QjZKwQ3/Whats-App-Image-2021-04-13-at-5-54-51-PM.jpg" alt="Whats-App-Image-2021-04-13-at-5-54-51-PM" border="0"></a><br /><a target='_blank' href='https://id.imgbb.com/'>aplikasi free share</a><br />
+<a href="https://ibb.co/DgNR2WH"><img src="https://i.ibb.co/QjZKwQ3/Whats-App-Image-2021-04-13-at-5-54-51-PM.jpg" alt="Whats-App-Image-2021-04-13-at-5-54-51-PM" border="0"></a><br />
+
+<a href="https://ibb.co/h1q2V0N"><img src="https://i.ibb.co/M5XP7dH/Whats-App-Image-2021-04-13-at-6-48-35-PM.jpg" alt="Whats-App-Image-2021-04-13-at-6-48-35-PM" border="0"></a><br />
