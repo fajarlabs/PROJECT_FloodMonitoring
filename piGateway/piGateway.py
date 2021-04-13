@@ -1,21 +1,35 @@
 import serial
 import struct
 from time import sleep
+import psycopg2
 
 PORT = 'COM3'
 BAUD_RATE = 9600
 
-ser = serial.Serial(PORT, BAUD_RATE, serial.EIGHTBITS, serial.PARITY_NONE, serial.STOPBITS_ONE)
+# Serial connection
+SER = None 
 
+# previx serial
 ALLOW_PREVIX = ["<<DATA"]
+
+# db account
+USERDB = "postgres"
+PASSDB = "postgres"
+HOSTDB = "127.0.0.1"
+PORTDB = "5432"
+DBNAME = "postgres"
+# db connection
+CONNECTION = None
+
 
 def main():
 	while True:
 		# read serial
-		data = receiveParse(ser.readline())
+		serial_data = SER.readline()
+		data = receiveParse(serial_data)
 
 		# didalam ini adalah proses parsing dan data diteruskan ke MQTT atau ke database
-		itemParse(data)
+		itemParse(data, serial_data)
 
 		# ini adalah perintah untuk mengirim pesan dari serial dan di broadcast
 		# ke transmitter nrf atau dari socket ke radio nrf
@@ -28,7 +42,7 @@ def sendCommand(node, req, data):
 	try :
 		# formatting command
 		query = "<<CMD%s~%s~%s>>\r\n" % (node, req, data)
-		ser.write(query.encode())
+		SER.write(query.encode())
 		is_send = True
 	except Exception as e :
 		print("ERROR")
@@ -36,14 +50,14 @@ def sendCommand(node, req, data):
 	return is_send
 
 # parse item series
-def itemParse(receive_data):
+def itemParse(receive_data, signal_message):
 	try :
 		dataList = receive_data.split("~")
 		serial_number = dataList[0]
 		data = dataList[1]
 		req = dataList[2]
 		batt = dataList[3]
-		print(serial_number+"~"+data+"~"+req+"~"+batt)
+		insertData(serial_number, data, req, batt, signal_message.decode('utf_8'))
 
 		# save into database
 		# do...
@@ -72,5 +86,25 @@ def receiveParse(serial_data):
 
 	return result
 
+def insertData(serial_number, data, req, batt, signal_message):
+	try:
+		cursor = CONNECTION.cursor()
+
+		sql_insert = """ INSERT INTO nodes (serial_number, data, req, battery, signal_message) VALUES (%s, %s, %s, %s, %s)"""
+		cursor.execute(sql_insert, (serial_number, data, req, batt, signal_message))
+
+		CONNECTION.commit()
+		count = cursor.rowcount
+		#print(count, "Record inserted successfully into nodes table")
+
+	except (Exception, psycopg2.Error) as error:
+		print("Failed to insert record into nodes table", error)
+
+
 if __name__ == "__main__":
-    main()
+	try :
+		CONNECTION = psycopg2.connect(user=USERDB,password=PASSDB,host=HOSTDB,port=PORTDB,database=DBNAME)
+		SER = serial.Serial(PORT, BAUD_RATE, serial.EIGHTBITS, serial.PARITY_NONE, serial.STOPBITS_ONE)
+	except Exception as e :
+		print(e)
+	main()
