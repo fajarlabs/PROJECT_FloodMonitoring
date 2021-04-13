@@ -24,17 +24,14 @@ The project made a simple flood monitoring system using a buoy sensor and radio 
 
 <h2>Receive Data Format</h2>
 
-`````<<CMD[node]~[command]~[data]>>`````
-
-`````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer
-
-Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : 
-
-`````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio
+`````<<CMD[node]~[command]~[data]>>`````<br />
+`````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer<br />
+Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : <br />
+`````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio<br />
 
 Contoh perintah untuk mematikan untuk menghidupkan relay panel
-`````<<CMD02~1~1>>````` <----- ON 
-`````<<CMD02~1~2>>````` <----- OFF
+`````<<CMD02~1~1>>````` <----- ON <br />
+`````<<CMD02~1~2>>````` <----- OFF<br />
 
 <a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
 
