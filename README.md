@@ -92,3 +92,12 @@ Retrieve dan command dari sini <br />
 <a href="https://ibb.co/DgNR2WH"><img src="https://i.ibb.co/QjZKwQ3/Whats-App-Image-2021-04-13-at-5-54-51-PM.jpg" alt="Whats-App-Image-2021-04-13-at-5-54-51-PM" border="0"></a><br />
 
 <a href="https://ibb.co/h1q2V0N"><img src="https://i.ibb.co/M5XP7dH/Whats-App-Image-2021-04-13-at-6-48-35-PM.jpg" alt="Whats-App-Image-2021-04-13-at-6-48-35-PM" border="0"></a><br />
+
+<a href="https://ibb.co/zmyzbyr"><img src="https://i.ibb.co/Jcf92fK/Whats-App-Image-2021-04-14-at-7-35-01-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-35-01-AM" border="0"></a>
+<a href="https://ibb.co/1ZxKc63"><img src="https://i.ibb.co/31HWKzw/Whats-App-Image-2021-04-14-at-7-33-16-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-33-16-AM" border="0"></a>
+<a href="https://ibb.co/YyH0wQB"><img src="https://i.ibb.co/b2cbDm5/Whats-App-Image-2021-04-14-at-7-31-27-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-31-27-AM" border="0"></a>
+<a href="https://ibb.co/bJRhJFB"><img src="https://i.ibb.co/HdpvdCz/Whats-App-Image-2021-04-14-at-7-28-10-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-28-10-AM" border="0"></a>
+<a href="https://ibb.co/Jsb5nLQ"><img src="https://i.ibb.co/rwL4kPs/Whats-App-Image-2021-04-14-at-7-26-18-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-26-18-AM" border="0"></a>
+<a href="https://ibb.co/mtGvR3R"><img src="https://i.ibb.co/Bjt4f9f/Whats-App-Image-2021-04-14-at-7-24-02-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-24-02-AM" border="0"></a>
+<a href="https://ibb.co/Rpw31Mp"><img src="https://i.ibb.co/qMQNz4M/Whats-App-Image-2021-04-14-at-7-18-26-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-18-26-AM" border="0"></a>
+<a href="https://ibb.co/GCVyGZR"><img src="https://i.ibb.co/kqhjzLX/Whats-App-Image-2021-04-14-at-7-18-06-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-18-06-AM" border="0"></a>
