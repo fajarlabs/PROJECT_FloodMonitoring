@@ -101,5 +101,7 @@ Retrieve dan command dari sini <br />
 <a href="https://ibb.co/bJRhJFB"><img src="https://i.ibb.co/HdpvdCz/Whats-App-Image-2021-04-14-at-7-28-10-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-28-10-AM" border="0"></a>
 <a href="https://ibb.co/Jsb5nLQ"><img src="https://i.ibb.co/rwL4kPs/Whats-App-Image-2021-04-14-at-7-26-18-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-26-18-AM" border="0"></a>
 <a href="https://ibb.co/mtGvR3R"><img src="https://i.ibb.co/Bjt4f9f/Whats-App-Image-2021-04-14-at-7-24-02-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-24-02-AM" border="0"></a>
+
+<h2> Cara lepas untuk setup pelampung </h2>
 <a href="https://ibb.co/Rpw31Mp"><img src="https://i.ibb.co/qMQNz4M/Whats-App-Image-2021-04-14-at-7-18-26-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-18-26-AM" border="0"></a>
 <a href="https://ibb.co/GCVyGZR"><img src="https://i.ibb.co/kqhjzLX/Whats-App-Image-2021-04-14-at-7-18-06-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-18-06-AM" border="0"></a>
