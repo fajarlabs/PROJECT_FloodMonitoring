@@ -10,6 +10,7 @@ Lalu silahkan masuk melalui SSH / putty<br />
 <b>SSH</b></br>
 User : pi<br />
 Pass : raspberry<br />
+Cara masuk ssh, buka cmd lalu ketikkan ````` ssh pi@xxx.xxx.xxx.xxx ````` lalu masukkan passwordnya<br />
 Lokasi script python ada di direktori : ````` /home/pi/Documents ````` <br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/pxky859/PATH-FILE-SCRIPT-PYTHON.png" alt="PATH-FILE-SCRIPT-PYTHON" border="0"></a><br />
 Cara menjalankan script ptyhonnya secara manual seperti berikut ini : <br />````` pi@raspberrypi:~/Documents $ python3 piGateway.py ````` <br />
