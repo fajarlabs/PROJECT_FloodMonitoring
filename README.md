@@ -58,7 +58,7 @@ Lampu indikator ada 3 warna : <br />
 <b>Warna Merah</b> : Kontaktor dalam keadaan OFF / kontaktor tidak terhubung <br />
 <b>Warna Kuning</b> : Power Supply OK </br>
 <b>Warna Hijau</b> : Kontaktor dalam keadaan ON atau generator dalam keadaan starting-up / aktif<br /><br />
-<img src="https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg" />
+<a href="https://ibb.co/4SdvPH1"><img src="https://i.ibb.co/ykSvWr4/Whats-App-Image-2021-04-14-at-7-13-49-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-13-49-AM" border="0"></a>
 <img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
 <img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
 
