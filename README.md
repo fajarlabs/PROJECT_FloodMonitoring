@@ -53,7 +53,11 @@ To run script with command prompt : <b>python piGateway.py</b><br />
 # Sketch Node Panel Controller
 <a href="https://ibb.co/rQQ8p9z"><img src="https://i.ibb.co/Jcc6pZG/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0"></a>
 
-# Box Panel Controller
+# Box Panel Controller <br />
+Lampu indikator ada 3 warna : <br />
+<b>Warna Merah</b> : Kontaktor dalam keadaan OFF / kontaktor tidak terhubung <br />
+<b>Warna Kuning</b> : Power Supply OK </br>
+<b>Warna Hijau</b> : Kontaktor dalam keadaan ON atau generator dalam keadaan starting-up / aktif<br /><br />
 <img src="https://i.ibb.co/mzH4Y9H/BOX-PANEL.jpg" />
 <img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
 <img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
