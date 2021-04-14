@@ -39,7 +39,7 @@ Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 `````<<CMD02~1~1>>````` <----- ON <br />
 `````<<CMD02~1~2>>````` <----- OFF<br />
 
-<h2>Check ports/h2><br />
+<h2>Check ports</h2><br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/P9nCbmL/PORT-LIST.png" alt="PORT-LIST" border="0"></a><br />
 <h2>Arduino IDE serial monitor</h2>
 <a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
