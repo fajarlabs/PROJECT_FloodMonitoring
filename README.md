@@ -40,6 +40,7 @@ Contoh perintah untuk mematikan untuk menghidupkan relay panel<br />
 `````<<CMD02~1~2>>````` <----- OFF<br />
 
 <h2>Check ports</h2><br />
+<a href="https://ibb.co/YyH0wQB"><img src="https://i.ibb.co/b2cbDm5/Whats-App-Image-2021-04-14-at-7-31-27-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-31-27-AM" border="0"></a><br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/P9nCbmL/PORT-LIST.png" alt="PORT-LIST" border="0"></a><br />
 Port yang di pakai di raspberrypi gateway : <br />
 <b>Port : /dev/ttyUSB0</b> <br />
@@ -93,9 +94,9 @@ Retrieve dan command dari sini <br />
 
 <a href="https://ibb.co/h1q2V0N"><img src="https://i.ibb.co/M5XP7dH/Whats-App-Image-2021-04-13-at-6-48-35-PM.jpg" alt="Whats-App-Image-2021-04-13-at-6-48-35-PM" border="0"></a><br />
 
+<h2> Cara mencopot pipa untuk setup ketinggian level airnya</h2>
 <a href="https://ibb.co/zmyzbyr"><img src="https://i.ibb.co/Jcf92fK/Whats-App-Image-2021-04-14-at-7-35-01-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-35-01-AM" border="0"></a>
 <a href="https://ibb.co/1ZxKc63"><img src="https://i.ibb.co/31HWKzw/Whats-App-Image-2021-04-14-at-7-33-16-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-33-16-AM" border="0"></a>
-<a href="https://ibb.co/YyH0wQB"><img src="https://i.ibb.co/b2cbDm5/Whats-App-Image-2021-04-14-at-7-31-27-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-31-27-AM" border="0"></a>
 <a href="https://ibb.co/bJRhJFB"><img src="https://i.ibb.co/HdpvdCz/Whats-App-Image-2021-04-14-at-7-28-10-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-28-10-AM" border="0"></a>
 <a href="https://ibb.co/Jsb5nLQ"><img src="https://i.ibb.co/rwL4kPs/Whats-App-Image-2021-04-14-at-7-26-18-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-26-18-AM" border="0"></a>
 <a href="https://ibb.co/mtGvR3R"><img src="https://i.ibb.co/Bjt4f9f/Whats-App-Image-2021-04-14-at-7-24-02-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-24-02-AM" border="0"></a>
