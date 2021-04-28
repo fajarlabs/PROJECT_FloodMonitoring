@@ -5,6 +5,18 @@
 #define FUELPIN 6
 #define CMD 0
 #define SERIAL_NUMBER 1002
+#include <Filters.h>
+
+float testFrequency = 50;                 // Standard current freqwensi indonesia (Hz)
+float windowLength = 40.0/testFrequency;    
+int voltageSensorPin = A0; // input voltage sensor
+float intercept = -0.04;
+float slope = 0.0405;
+float volts; // data voltage
+unsigned long voltCheckPeriode = 1000; 
+unsigned long voltCurTime = 0;
+RunningStatistics inputStats;   // init statistic
+
 
 RF24 radio(7, 8);               // nRF24L01(+) radio attached using Getting Started board
 
@@ -17,9 +29,8 @@ unsigned long last_sent;             // When did we last send?
 
 struct payload_t { 
   unsigned long sn;
-  unsigned long data;
   unsigned long req;   
-  double batt;
+  char data[25];
 };
 
 struct packet_t { 
@@ -35,6 +46,7 @@ typedef struct global_t {
 Global global; 
 
 void setup(void) {
+  inputStats.setWindowSecs(windowLength);
   pinMode(RELAYPIN, OUTPUT); // relay for trigger
   pinMode(FUELPIN, INPUT);   // fuel input
   Serial.begin(9600);
@@ -56,6 +68,15 @@ void setup(void) {
 void loop(void) {
   network.update();                  // Check the network regularly
   unsigned long now = millis();
+
+  voltageSensorPin = analogRead(A0);
+  inputStats.input(voltageSensorPin);
+
+  if((unsigned long)(millis() - voltCurTime) >= voltCheckPeriode) {   
+    volts = intercept + slope * inputStats.sigma(); //offset y amplitud
+    volts = volts*(40.3231); 
+    voltCurTime = millis(); 
+  }
   
   //===== Receiving =====//
   while (network.available()) {      // Is there anything ready for us?
@@ -65,19 +86,20 @@ void loop(void) {
     /*
     Serial.println("Received packet #");
     Serial.println(payload.sn);
-    Serial.println(payload.data);
     Serial.println(payload.req);
-    Serial.println(payload.batt);
+    Serial.println(payload.data);
     */
-    if(payload.data == 1) {
-      Serial.println("<<TriggerON>>");
-      digitalWrite(RELAYPIN, HIGH);
-      global.isRelayON = true;
-    }
-    if(payload.data == 2) {
-      Serial.println("<<TriggerOFF>>");
-      digitalWrite(RELAYPIN, LOW);
-      global.isRelayON = false;
+    if(payload.req == 1){
+      if(payload.data == 1) {
+        Serial.println("<<TriggerON>>");
+        digitalWrite(RELAYPIN, HIGH);
+        global.isRelayON = true;
+      }
+      if(payload.data == 2) {
+        Serial.println("<<TriggerOFF>>");
+        digitalWrite(RELAYPIN, LOW);
+        global.isRelayON = false;
+      }
     }
   }
 
@@ -90,11 +112,41 @@ void loop(void) {
   // if request == 1 is transmit 
   if (now - last_sent >= interval) {
     last_sent = now;
+
+    //============================================================================
+    // Fuel data
+    //============================================================================
     int fuelExist = 0;
     if(digitalRead(FUELPIN) == HIGH) fuelExist = 1;
-    // get current voltage
-    double curvolt = double( readVcc() ) / 1000;
-    payload_t payload2 = { SERIAL_NUMBER, fuelExist, CMD, curvolt };
+
+    //============================================================================
+    // Module voltage
+    //============================================================================
+    double curvolt = double( readVcc() ) / 1000; // (current module voltage DC)
+    
+    //============================================================================
+    // AC voltage sensor
+    //============================================================================
+    // AC voltage variable
+    char curACStr[4];
+    // format float 
+    dtostrf(volts, 3, 0, curACStr);
+
+    //============================================================================
+    // Concat data using delimiter '$'
+    //============================================================================
+    String data = String(fuelExist);
+    data += "$";
+    data += String(curvolt);
+    data += "$";
+    data += String(curACStr);
+    char datachar[data.length()+1];
+    data.toCharArray(datachar,data.length()+1);
+    // payload
+    payload_t payload2 = { SERIAL_NUMBER, CMD, curvolt };
+    // bind to struct (AC voltage)
+    strncpy(payload2.data, datachar, sizeof(payload2.data) - 1);
+    
     RF24NetworkHeader header2(node01);     // (Address where the data is going)
     if(network.write(header2, &payload2, sizeof(payload2))) {
       Serial.println("<<Transmit>>");

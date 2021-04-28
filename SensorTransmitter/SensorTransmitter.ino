@@ -18,9 +18,8 @@ unsigned long packets_sent;          // How many have we sent already
 
 struct payload_t {                   // Structure of our payload
   unsigned long sn;
-  unsigned long data;
-  unsigned long req;
-  double batt;
+  unsigned long req;   
+  char data[25];
 };
 
 void setup(void) {
@@ -48,12 +47,34 @@ void loop() {
   if (now - last_sent >= interval) {
     last_sent = now;
 
-    long data = 1; // data ON (trigger flood)
-    // get current voltage
+    //============================================================================
+    // Flood data static
+    //============================================================================
+    long floatData = 1; // data ON (trigger flood)
+    
+    //============================================================================
+    // Current voltage DC module
+    //============================================================================
     double curvolt = double( readVcc() ) / 1000;
-    payload_t payload = { SERIAL_NUMBER, data, CMD, curvolt };
+    
+    //============================================================================
+    // Concat data using delimiter '$'
+    //============================================================================
+    String data = String(floatData);
+    data += "$";
+    data += String(curvolt);
+    char datachar[data.length()+1];
+    data.toCharArray(datachar,data.length()+1);
+    
+    // payload
+    payload_t payload2 = { SERIAL_NUMBER, CMD };
+    
+    // bind to struct (AC voltage)
+    strncpy(payload2.data, datachar, sizeof(payload2.data) - 1);
+    
     RF24NetworkHeader header(/*to node*/ node01);
-    if(network.write(header, &payload, sizeof(payload))){
+    
+    if(network.write(header, &payload2, sizeof(payload2))){
       Serial.println("<<TRANSMIT>>");
     } else {
       Serial.println("<<FAILED>>");

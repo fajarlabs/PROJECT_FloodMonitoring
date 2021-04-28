@@ -5,7 +5,10 @@ import psycopg2
 import time
 import threading
 
-PORT = '/dev/ttyUSB0'
+# raspberry
+#PORT = '/dev/ttyUSB0'
+# PC
+PORT = 'COM3'
 BAUD_RATE = 9600
 
 # Serial connection
@@ -41,6 +44,11 @@ def main():
 		# sendCommand("02","1","2")
 		sleep(1)
 
+
+def thread_command():
+	while 1 :
+		pass
+
 '''
 Fungsi dibawah ini untuk mendeteksi apakah sensor banjir mengirim data terbaru
 setelah menyalakan GENSET, jika lebih dari 2 Menit maka matikan GENSET secara otomatis
@@ -50,12 +58,13 @@ def thread_timeout():
 		try :
 			if '1001' in TIMEDICTS :
 				elapsed_time = time.time() - TIMEDICTS["1001"] 
-				if elapsed_time > 120 :
-					sendCommand("02","1","2") # relay-off
-					TIMEDICTS["1001"] = None  # set to None supaya tidak mengirim off-signal mematikan GENSET
+				if elapsed_time > 12 :
+					if TIMEDICTS["1001"] > 0 :
+						print("Generator is shutting-down..")
+						sendCommand("02","1","2") # relay-off
+					TIMEDICTS["1001"] = 0  # set to None supaya tidak mengirim off-signal mematikan GENSET
 		except Exception as e :
 			print(e)
-		print("Check timeout..")
 		sleep(1) 
 '''
 Fungsi dibawah ini untuk kirim pesan ke serial RS232 ke gateway
@@ -77,12 +86,21 @@ maka akan menyalakan alarm di Radio Gateway (Buzzer) bahwa bbm dalam keadaan kur
 dan otomatis relay akan terputus, silahkan diubah sesuai kebutuhan
 '''
 def workflow(serial_number, data):
-	# periksa serial number dari nodenya
+	print(data);
+
+	# periksa serial number dari sensor banjir
+	# 1001 adalah node dari sensor banjir
 	if serial_number == "1001" :
+		splitData = data.split('$')
+		floatSensor = splitData[0]
+
 		# jika data == 1 terjadi banjir
-		if data == '1':
+		if floatSensor == '1':
 			print("Generator is starting-up...")
-			# periksa pada records database terakhir
+			sendCommand("02","1","1") # on relay
+			TIMEDICTS[serial_number] = time.time()
+		
+			'''
 			if checkFuelExist('1002') : # check data controller panel
 				print("Fuel is exist and preparing to starting-up")
 				# perintahkan node 02 untuk menyalakan relay
@@ -93,18 +111,32 @@ def workflow(serial_number, data):
 				print("Fuel is empty")
 				sendCommand() # alarm buzzer on radio gateway
 				sendCommand("02","1","2") # putuskan relay starter
+			'''
 
 # parse item series
 def itemParse(receive_data, signal_message):
 	try :
 		dataList = receive_data.split("~")
 		serial_number = dataList[0]
-		data = dataList[1]
-		req = dataList[2]
-		batt = dataList[3]
-		workflow(serial_number, data) # alur program
+		req = dataList[1]
+		data = dataList[2]
+		
+		# box panel control
+		if serial_number == '1002':
+			splitItemList = data.split('$')
+			# format <<DATA[serial_number]~[request]~[[fuel_sensor_status]$[module_voltage]$[ac_voltage]]
+			# fuel_sensor_status = splitItemList[0] 
+			module_voltage = splitItemList[1]
+			insertData(serial_number, data, req, module_voltage, signal_message.decode('utf_8'))
 
-		insertData(serial_number, data, req, batt, signal_message.decode('utf_8'))
+		# sensor module
+		if serial_number == '1001':
+			splitItemList = data.split('$')
+			# floatSensor = splitItemList[0]
+			module_voltage = splitItemList[1]
+			insertData(serial_number, data, req, module_voltage, signal_message.decode('utf_8'))
+			# cycles workflow
+			workflow(serial_number, data) # alur program
 
 		# save into database
 		# do...
@@ -160,6 +192,19 @@ def checkFuelExist(serial_number):
 		isFuelExist = int(records[0])
 		if isFuelExist < 1:
 			result = True
+	except Exception as e :
+		print(e)
+
+	return result
+
+def getAllCommand():
+	result = []
+	try :
+		cursor = CONNECTION.cursor()
+		sqlite_select_query = """ SELECT * FROM nodes_cmd"""
+		cursor.execute(sqlite_select_query)
+		records = list(cursor.fetchall())
+
 	except Exception as e :
 		print(e)
 

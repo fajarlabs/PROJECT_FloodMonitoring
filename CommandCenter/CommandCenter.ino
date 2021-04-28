@@ -19,10 +19,9 @@ unsigned long packets_sent;          // How many have we sent already
 String serialData;
 
 struct payload_t {
-  unsigned long sn;    // SERIAL NUMBER
-  unsigned long data;  // data
-  unsigned long req;   // command
-  double batt;         // optional BATTERY DATA
+  unsigned long sn;
+  unsigned long req;   
+  char data[26];
 };
 
 struct command_t {
@@ -80,11 +79,9 @@ void payloadPrint(payload_t pload) {
     Serial.print("<<DATA");
     Serial.print(pload.sn);
     Serial.print("~");
-    Serial.print(pload.data);
-    Serial.print("~");
     Serial.print(pload.req);
     Serial.print("~");
-    Serial.print(pload.batt);
+    Serial.print(pload.data);
     Serial.println(">>");
 }
 
