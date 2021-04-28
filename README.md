@@ -26,11 +26,14 @@ Dibawah ini adalah bentuk format serial data yang diterima dari radio<br />
 Format data seperti dibawah ini : <br />
 <b>SN</b> : Serial number atau NODE radio <br />
 <b>REQ</b> : Adalah mode yang di kirim ke node lain, ini harus di sesuikan dengan coding mode di alatnya <br />
-<b>DATA</b> : request / command <br />
+<b>DATA</b> : Berisi multi data yang di pisahkan / delimiter dengan karakter '$' / dolar <br />
 
 <h2>Command Data Format</h2>
 
 `````<<CMD[node]~[req]~[data]>>`````<br />
+<b>NODE</b> : Serial number atau NODE radio <br />
+<b>REQ</b> : Adalah mode yang di kirim ke node lain, ini harus di sesuikan dengan coding mode di alatnya <br />
+<b>DATA</b> : request / command tanpa berisi delimiter '$' dolar hanya data bertipe unsigned-long <br />
 `````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer<br />
 Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : <br />
 `````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio<br />
