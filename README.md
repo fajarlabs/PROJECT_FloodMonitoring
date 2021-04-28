@@ -64,7 +64,7 @@ Port yang di pakai di raspberrypi gateway : <br />
 # Sketch Float Sensor <br />
 <a href="https://ibb.co/3CtSbP8"><img src="https://i.ibb.co/x7Vzbrc/FLOAT-SENSOR.png" alt="FLOAT-SENSOR" border="0"></a><br />
 # Sketch Panel Controller <br />
-<a href="https://ibb.co/PCRHHVG"><img src="https://i.ibb.co/9YJ55dH/PANEL-CONTROLLER-bb.png" alt="PANEL-CONTROLLER-bb" border="0"></a><br />
+<a href="https://ibb.co/80PH36w"><img src="https://i.ibb.co/jT3SKgY/PANEL-CONTROLLER-bb.png" alt="PANEL-CONTROLLER-bb" border="0"></a><br />
 
 # Box Panel Controller <br />
 Lampu indikator ada 3 warna : <br />
