@@ -6,9 +6,9 @@ import time
 import threading
 
 # raspberry
-#PORT = '/dev/ttyUSB0'
+PORT = '/dev/ttyUSB0'
 # PC
-PORT = 'COM3'
+# PORT = 'COM3'
 BAUD_RATE = 9600
 
 # Serial connection
