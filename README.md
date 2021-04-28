@@ -46,13 +46,6 @@ Port yang di pakai di raspberrypi gateway : <br />
 <b>Port : /dev/ttyUSB0</b> <br />
 <b>Baud Rate : 9600</b> <br /><br />
 
-<h2>Arduino IDE serial monitor</h2>
-<a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
-
-<h2>Python CMD Windows</h2>
-To run script with command prompt : <b>python piGateway.py</b><br />
-<a href="https://ibb.co/3f0XVs3"><img src="https://i.ibb.co/4sjyCfq/python.png" alt="python" border="0"></a>
-
 <h2>Records DB (PostgreSQL)</h2>
 <a href="https://ibb.co/zH8crwm"><img src="https://i.ibb.co/fG8R27X/data-Record.png" alt="data-Record" border="0"></a><br />
 <h2>Commands on table "nodes_cmd"</h2>
