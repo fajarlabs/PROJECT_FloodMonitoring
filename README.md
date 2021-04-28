@@ -22,16 +22,15 @@ Cara menjalankannya perintahnya berikut ini :  <br />````` pm2 start 0  ````` <b
 <h2>Receive data from Serial Data</h2>
 
 Dibawah ini adalah bentuk format serial data yang diterima dari radio<br />
-`````<<DATA1002~0~0~5.44>>`````<br />
+`````<<DATA[SN]~[REQ]~[[DATA1]$[DATA2]$[DATA3]...>>`````<br />
 Format data seperti dibawah ini : <br />
-<b>1002</b> : Serial number <br />
-<b>0</b> : data <br />
-<b>0</b> : request / command <br />
-<b>5.44</b> : battery level <br />
+<b>SN</b> : Serial number atau NODE radio <br />
+<b>REQ</b> : Adalah mode yang di kirim ke node lain, ini harus di sesuikan dengan coding mode di alatnya <br />
+<b>DATA</b> : request / command <br />
 
 <h2>Receive Data Format</h2>
 
-`````<<CMD[node]~[command]~[data]>>`````<br />
+`````<<CMD[node]~[req]~[data]>>`````<br />
 `````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer<br />
 Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : <br />
 `````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio<br />
