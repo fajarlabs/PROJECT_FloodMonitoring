@@ -47,7 +47,11 @@ def main():
 
 def thread_command():
 	while 1 :
-		pass
+		data = getAllCommand()
+		for i in data :
+			sendCommand(i[1], i[2], i[3])
+			if removeCmdData(i[0]) :
+				print("Delete CMD id : %s",(i[0]))
 
 '''
 Fungsi dibawah ini untuk mendeteksi apakah sensor banjir mengirim data terbaru
@@ -201,12 +205,27 @@ def getAllCommand():
 	result = []
 	try :
 		cursor = CONNECTION.cursor()
-		sqlite_select_query = """ SELECT * FROM nodes_cmd"""
+		sqlite_select_query = """ SELECT id, node, req, data FROM nodes_cmd """
 		cursor.execute(sqlite_select_query)
-		records = list(cursor.fetchall())
+		result = list(cursor.fetchall())
+		sleep(1)
 
 	except Exception as e :
 		print(e)
+
+	return result
+
+def removeCmdData(id):
+	result = False
+	try:
+		cursor = CONNECTION.cursor()
+
+		sql_insert = """ DELETE FROM nodes_cmd WHERE id = %s"""
+		cursor.execute(sql_insert, (id,))
+		CONNECTION.commit()
+		result = True
+	except (Exception, psycopg2.Error) as error:
+		print("Failed to insert record into nodes table", error)
 
 	return result
 
@@ -218,6 +237,8 @@ if __name__ == "__main__":
 		ttout = threading.Thread(target=thread_timeout, args=())
 		ttout.start()
 		# if connection fail do not run main program
+		ttcmd = threading.Thread(target=thread_command, args=())
+		ttcmd.start()
 		main()
 	except Exception as e :
 		print(e)
