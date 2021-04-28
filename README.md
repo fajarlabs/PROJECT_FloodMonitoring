@@ -28,7 +28,7 @@ Format data seperti dibawah ini : <br />
 <b>REQ</b> : Adalah mode yang di kirim ke node lain, ini harus di sesuikan dengan coding mode di alatnya <br />
 <b>DATA</b> : request / command <br />
 
-<h2>Receive Data Format</h2>
+<h2>Command Data Format</h2>
 
 `````<<CMD[node]~[req]~[data]>>`````<br />
 `````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer<br />
@@ -48,17 +48,24 @@ Port yang di pakai di raspberrypi gateway : <br />
 
 <h2>Arduino IDE serial monitor</h2>
 <a href="https://ibb.co/PWbLk96"><img src="https://i.ibb.co/7pTfhR1/SERIAL.png" alt="SERIAL" border="0"></a>
+
 <h2>Python CMD Windows</h2>
 To run script with command prompt : <b>python piGateway.py</b><br />
 <a href="https://ibb.co/3f0XVs3"><img src="https://i.ibb.co/4sjyCfq/python.png" alt="python" border="0"></a>
+
 <h2>Records DB (PostgreSQL)</h2>
-<a href="https://ibb.co/6Ww6cQS"><img src="https://i.ibb.co/CH8xpLy/DB-PREVIEW.png" alt="DB-PREVIEW" border="0"></a>
+<a href="https://ibb.co/zH8crwm"><img src="https://i.ibb.co/fG8R27X/data-Record.png" alt="data-Record" border="0"></a><br />
+<h2>Commands on table "nodes_cmd"</h2>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/9Vf42ZB/Command-Push.png" alt="Command-Push" border="0"></a><br />
+<h2>Log Panel Controller</h2>
+<a href="https://ibb.co/3dY326t"><img src="https://i.ibb.co/KhzPd4C/data-Log-Controller.png" alt="data-Log-Controller" border="0"></a>
 
-# Sketch Node Sensor
-<img src="https://i.ibb.co/GCDMrsv/SKETCH-bb.png" alt="SKETCH-bb" border="0" />
-
-# Sketch Node Panel Controller
-<a href="https://ibb.co/rQQ8p9z"><img src="https://i.ibb.co/Jcc6pZG/SKETCH-PANEL-bb.png" alt="SKETCH-PANEL-bb" border="0"></a>
+# Sketch Command Center <br />
+<a href="https://ibb.co/sbL2gpL"><img src="https://i.ibb.co/q7bdDLb/COMMAND-CENTER-bb.png" alt="COMMAND-CENTER-bb" border="0"></a><br />
+# Sketch Float Sensor <br />
+<a href="https://ibb.co/3CtSbP8"><img src="https://i.ibb.co/x7Vzbrc/FLOAT-SENSOR.png" alt="FLOAT-SENSOR" border="0"></a><br />
+# Sketch Panel Controller <br />
+<a href="https://ibb.co/PCRHHVG"><img src="https://i.ibb.co/9YJ55dH/PANEL-CONTROLLER-bb.png" alt="PANEL-CONTROLLER-bb" border="0"></a><br />
 
 # Box Panel Controller <br />
 Lampu indikator ada 3 warna : <br />
