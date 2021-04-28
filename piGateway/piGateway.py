@@ -47,9 +47,12 @@ def main():
 
 def thread_command():
 	while 1 :
+		# get all command
 		data = getAllCommand()
 		for i in data :
+			# send command via serial
 			sendCommand(i[1], i[2], i[3])
+			# remove command after send via serial
 			if removeCmdData(i[0]) :
 				print("Delete CMD id : %s",(i[0]))
 
