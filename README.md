@@ -36,6 +36,7 @@ Format data seperti dibawah ini : <br />
 <b>DATA</b> : request / command tanpa berisi delimiter '$' dolar hanya data bertipe unsigned-long <br />
 
 <h2>Contoh Perintah</h2>
+
 `````<<CMD02~0~0>>````` <-------- perintah untuk testping serial untuk menyalakan buzzer<br />
 Apabila untuk transmit ke node lain perintah yang diubah adalah nodenya, contonya seperti ini : <br />
 `````<<CMD02~1~1>>````` <-------- perintah untuk mengirimkan pesan ke node02 melalu NRF radio<br />
