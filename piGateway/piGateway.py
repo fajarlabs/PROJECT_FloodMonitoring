@@ -54,7 +54,7 @@ def thread_command():
 			sendCommand(i[1], i[2], i[3])
 			# remove command after send via serial
 			if removeCmdData(i[0]) :
-				print("Delete CMD id : %s",(i[0]))
+				print("Delete last command with id : %s",(i[0]))
 
 '''
 Fungsi dibawah ini untuk mendeteksi apakah sensor banjir mengirim data terbaru
@@ -93,8 +93,6 @@ maka akan menyalakan alarm di Radio Gateway (Buzzer) bahwa bbm dalam keadaan kur
 dan otomatis relay akan terputus, silahkan diubah sesuai kebutuhan
 '''
 def workflow(serial_number, data):
-	print(data);
-
 	# periksa serial number dari sensor banjir
 	# 1001 adalah node dari sensor banjir
 	if serial_number == "1001" :

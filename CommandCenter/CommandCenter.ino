@@ -148,9 +148,9 @@ long readVcc() {
 void transmitData(uint16_t node, int req, long data) {
   // get current voltage
   double curvolt = double( readVcc() ) / 1000;
-  payload_t packets = { SERIAL_NUMBER, data, req, curvolt };
+  command_t packets_cmd = { SERIAL_NUMBER, req, data };
   RF24NetworkHeader header(/*to node*/ node);
-  if(network.write(header, &packets, sizeof(packets))){
+  if(network.write(header, &packets_cmd, sizeof(packets_cmd))){
     Serial.println("<<TRANSMIT>>");
   } else {
     Serial.println("<<FAILED>>");

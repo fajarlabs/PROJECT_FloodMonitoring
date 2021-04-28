@@ -33,9 +33,9 @@ struct payload_t {
   char data[25];
 };
 
-struct packet_t { 
+struct command_t {
   uint16_t node;
-  int cmd;
+  unsigned long req;
   unsigned long data;
 };
 
@@ -81,21 +81,21 @@ void loop(void) {
   //===== Receiving =====//
   while (network.available()) {      // Is there anything ready for us?
     RF24NetworkHeader header;        // If so, grab it and print it out
-    payload_t payload;
-    network.read(header, &payload, sizeof(payload));
+    command_t cmd_payload;
+    network.read(header, &cmd_payload, sizeof(cmd_payload));
     /*
     Serial.println("Received packet #");
-    Serial.println(payload.sn);
-    Serial.println(payload.req);
-    Serial.println(payload.data);
+    Serial.println(cmd_payload.node);
+    Serial.println(cmd_payload.req);
+    Serial.println(cmd_payload.data);
     */
-    if(payload.req == 1){
-      if(payload.data == 1) {
+    if(cmd_payload.req == 1){
+      if(cmd_payload.data == 1) {
         Serial.println("<<TriggerON>>");
         digitalWrite(RELAYPIN, HIGH);
         global.isRelayON = true;
       }
-      if(payload.data == 2) {
+      if(cmd_payload.data == 2) {
         Serial.println("<<TriggerOFF>>");
         digitalWrite(RELAYPIN, LOW);
         global.isRelayON = false;
