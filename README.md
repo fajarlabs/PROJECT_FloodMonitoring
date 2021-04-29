@@ -34,6 +34,7 @@ Format data seperti dibawah ini : <br />
 <b>NODE</b> : Serial number atau NODE radio <br />
 <b>REQ</b> : Adalah mode yang di kirim ke node lain, ini harus di sesuikan dengan coding mode di alatnya <br />
 <b>DATA</b> : request / command tanpa berisi delimiter '$' dolar hanya data bertipe unsigned-long <br />
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/pJrTyk9/Result-All-Data.png" alt="Result-All-Data" border="0"></a>
 
 <h2>Contoh Perintah</h2>
 
