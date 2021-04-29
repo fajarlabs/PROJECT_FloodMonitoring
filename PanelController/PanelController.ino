@@ -6,10 +6,11 @@
 #define CMD 0
 #define SERIAL_NUMBER 1002
 #include <Filters.h>
+#define voltageSensorPin A0 // input voltage sensor
+#define voltageDCSensorPin A1
 
-float testFrequency = 50;                 // Standard current freqwensi indonesia (Hz)
+float testFrequency = 50; // Standard current freqwensi indonesia (Hz)
 float windowLength = 40.0/testFrequency;    
-int voltageSensorPin = A0; // input voltage sensor
 float intercept = -0.04;
 float slope = 0.0405;
 float volts; // data voltage
@@ -17,6 +18,16 @@ unsigned long voltCheckPeriode = 1000;
 unsigned long voltCurTime = 0;
 RunningStatistics inputStats;   // init statistic
 
+// Floats for ADC voltage & Input voltage
+float adc_voltage = 0.0;
+float in_voltage = 0.0;
+// Floats for resistor values in divider (in ohms)
+float R1 = 30000.0;
+float R2 = 7500.0; 
+// Float for Reference Voltage
+float ref_voltage = 5.0;
+// Integer for ADC value
+int adc_value = 0;
 
 RF24 radio(7, 8);               // nRF24L01(+) radio attached using Getting Started board
 
@@ -68,14 +79,20 @@ void setup(void) {
 void loop(void) {
   network.update();                  // Check the network regularly
   unsigned long now = millis();
-
-  voltageSensorPin = analogRead(A0);
-  inputStats.input(voltageSensorPin);
+  inputStats.input(analogRead(voltageSensorPin));
 
   if((unsigned long)(millis() - voltCurTime) >= voltCheckPeriode) {   
+    // Alternating Current Voltage Data
     volts = intercept + slope * inputStats.sigma(); //offset y amplitud
     volts = volts*(40.3231); 
     voltCurTime = millis(); 
+    
+    // Directing current Voltage data
+    adc_value = analogRead(voltageDCSensorPin);
+    // Determine voltage at ADC input
+    adc_voltage  = (adc_value * ref_voltage) / 1024.0; 
+    // Calculate voltage at divider input
+    in_voltage = adc_voltage / (R2/(R1+R2)); 
   }
   
   //===== Receiving =====//
@@ -140,6 +157,8 @@ void loop(void) {
     data += String(curvolt);
     data += "$";
     data += String(curACStr);
+    data += "$";
+    data += String(in_voltage);
     char datachar[data.length()+1];
     data.toCharArray(datachar,data.length()+1);
     // payload
