@@ -60,6 +60,9 @@ Port yang di pakai di raspberrypi gateway : <br />
 <h2>Log Panel Controller</h2>
 <a href="https://ibb.co/3dY326t"><img src="https://i.ibb.co/KhzPd4C/data-Log-Controller.png" alt="data-Log-Controller" border="0"></a>
 
+# Flash FTDI to PROMINI <br />
+<img src="https://1.bp.blogspot.com/-FulMly22DqE/XH8Mj9CGd6I/AAAAAAAAAdI/rYmbPBr8VsI3411gq9SKbitdQBda4Z24QCLcBGAs/s1600/ftdi.png" />
+
 # Sketch Command Center <br />
 <a href="https://ibb.co/sbL2gpL"><img src="https://i.ibb.co/q7bdDLb/COMMAND-CENTER-bb.png" alt="COMMAND-CENTER-bb" border="0"></a><br />
 # Sketch Float Sensor <br />
@@ -75,9 +78,6 @@ Lampu indikator ada 3 warna : <br />
 <a href="https://ibb.co/4SdvPH1"><img src="https://i.ibb.co/ykSvWr4/Whats-App-Image-2021-04-14-at-7-13-49-AM.jpg" alt="Whats-App-Image-2021-04-14-at-7-13-49-AM" border="0"></a>
 <img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
 <img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
-
-# Flash FTDI to PROMINI <br />
-<img src="https://1.bp.blogspot.com/-FulMly22DqE/XH8Mj9CGd6I/AAAAAAAAAdI/rYmbPBr8VsI3411gq9SKbitdQBda4Z24QCLcBGAs/s1600/ftdi.png" />
 
 # Float Sensor
 <img src="https://i.ibb.co/J73hCQb/SENSOR-FLOAT.jpg" />
