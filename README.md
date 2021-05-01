@@ -76,6 +76,9 @@ Lampu indikator ada 3 warna : <br />
 <img src="https://i.ibb.co/tzzwFxp/BOX-PANEL-FLASH.jpg" />
 <img src="https://i.ibb.co/HXfv78d/BOX-PANEL2.jpg" />
 
+# Flash FTDI to PROMINI <br />
+<img src="https://1.bp.blogspot.com/-FulMly22DqE/XH8Mj9CGd6I/AAAAAAAAAdI/rYmbPBr8VsI3411gq9SKbitdQBda4Z24QCLcBGAs/s1600/ftdi.png" />
+
 # Float Sensor
 <img src="https://i.ibb.co/J73hCQb/SENSOR-FLOAT.jpg" />
 <img src="https://i.ibb.co/Tvc8hM1/SENSOR-FLOAT2.jpg" />
