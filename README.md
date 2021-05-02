@@ -61,7 +61,7 @@ Port yang di pakai di raspberrypi gateway : <br />
 # Flash FTDI to PROMINI <br />
 Sesuaikan pin-pinnya dan tancapkan ke board promininya ke lubang2nya tanpa disolder dan tahan agar socketnya menempel dengan baik <br />
 lalu coba buka arduino IDE dan sesuikan PORTnya. Untuk selectornya set ke 5 volt di FTDInya.<br />
-<img src="https://1.bp.blogspot.com/-FulMly22DqE/XH8Mj9CGd6I/AAAAAAAAAdI/rYmbPBr8VsI3411gq9SKbitdQBda4Z24QCLcBGAs/s1600/ftdi.png" />
+<img src="https://www.b4x.com/android/forum/attachments/conexao-ftdi-arduino-pro-mini-jpg.53557/" />
 
 # Sketch Command Center <br />
 <a href="https://ibb.co/sbL2gpL"><img src="https://i.ibb.co/q7bdDLb/COMMAND-CENTER-bb.png" alt="COMMAND-CENTER-bb" border="0"></a><br />
