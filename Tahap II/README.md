@@ -1,5 +1,5 @@
 # Project01 - Development Tahap II
-The project made a simple flood monitoring system using a buoy sensor and rain-gauge & radio nrf24l01
+The project made a simple flood monitoring system using a buoy sensor, rain-gauge and radio nrf24l01
 
 # Sumber Kode
 Didalam folder tahap II ini terdapat folder script diantaranya, <br />
