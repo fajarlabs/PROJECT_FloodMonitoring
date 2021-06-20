@@ -62,5 +62,4 @@ Gambar PCB seperti berikut ini: <br />
 Galeri proyek : <br />
 <a href="https://ibb.co/zfkCwdP"><img src="https://i.ibb.co/cTmRdq2/Whats-App-Image-2021-06-20-at-11-57-32-PM-1.jpg" alt="Whats-App-Image-2021-06-20-at-11-57-32-PM-1" border="0"></a><br />
 <a href="https://ibb.co/4Vt1FCm"><img src="https://i.ibb.co/nLmPw4g/Whats-App-Image-2021-06-20-at-11-57-32-PM-2.jpg" alt="Whats-App-Image-2021-06-20-at-11-57-32-PM-2" border="0"></a><br />
-<a href="https://ibb.co/F5yYywm"><img src="https://i.ibb.co/ZBFgF8G/Whats-App-Image-2021-06-20-at-11-57-32-PM-3.jpg" alt="Whats-App-Image-2021-06-20-at-11-57-32-PM-3" border="0"></a><br />
 <a href="https://ibb.co/3zZNfRB"><img src="https://i.ibb.co/GTS2sHc/Whats-App-Image-2021-06-20-at-11-57-32-PM-4.jpg" alt="Whats-App-Image-2021-06-20-at-11-57-32-PM-4" border="0"></a><br />
