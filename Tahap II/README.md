@@ -51,6 +51,8 @@ Pin untuk NRF (warna biru) <br />
 <b>Pin 12</b> : MOSI <br />
 <b>Pin 13</b> : SCK <br />
 
+Pin untuk <i>rain gauge sensor</i> pada <b>Pin 6</b>
+
 Untuk desain PCB menggunakan sprintlayout dan sudah terlampir di dalam folder Tahap II dengan nama file PCB_Interface.lay <br />
 Gambar PCB seperti berikut ini: <br />
 <a href="https://ibb.co/GcJhgcD"><img src="https://i.ibb.co/gz7nsz8/PCB-Interface.jpg" alt="PCB-Interface" border="0"></a><br />
