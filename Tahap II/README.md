@@ -1,6 +1,16 @@
 # Project01 - Development Tahap II
 The project made a simple flood monitoring system using a buoy sensor and rain-gauage & radio nrf24l01
 
+# Sumber Kode
+Didalam folder tahap II ini terdapat folder script diantaranya, <br />
+1.) piGateway : Berisi script python yang dijalankan di raspberry gateway <br />
+2.) SubscriberMQTT : Berisi script python yg dijalankan disisi server untuk menerima raw data yang dikirim / dibroadcast untuk raspberrypi gateway<br />
+3.) TRANSMIT_FLOOD_SENSOR : Berisi script untuk arduino <br />
+
+# FLASH IC ATMEGA328
+Menggunakan USB ASP + ZIP Socket <br />
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/T4M5ph7/USB-ASP.jpg" alt="USB-ASP" border="0"></a> <br />
+
 # Raspberry PI<br />
 Bukan terminal dan tambahkan library paho.mqtt dengan mengetik <br />
 ````` pip install paho-mqtt ````` <br />
@@ -22,7 +32,7 @@ Untuk instalasi mosquitto-clients di linux ubuntu seperti berikut ini : <br />
 ````` sudo apt-get install mosquitto-clients `````
 
 Untuk perintah testing mqtt tanpa script juga bisa dilakukan dengan mengetik perintah : <br />
-<a href="https://ibb.co/FBj3fby"><img src="https://i.ibb.co/4j5tDZX/mosquitto-sub.png" alt="mosquitto-sub" border="0"></a>
+<a href="https://ibb.co/FBj3fby"><img src="https://i.ibb.co/4j5tDZX/mosquitto-sub.png" alt="mosquitto-sub" border="0"></a><br />
 ````` mosquitto_sub -h test.mosquitto.org -t "/mytopic/raw_data" -v ````` <br />
 
 Untuk screenshot hasil test seperti berikut ini : <br />
