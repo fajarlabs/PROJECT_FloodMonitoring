@@ -3,9 +3,9 @@ The project made a simple flood monitoring system using a buoy sensor and rain-g
 
 # Sumber Kode
 Didalam folder tahap II ini terdapat folder script diantaranya, <br />
-1.) piGateway : Berisi script python yang dijalankan di raspberry gateway <br />
-2.) SubscriberMQTT : Berisi script python yg dijalankan disisi server untuk menerima raw data yang dikirim / dibroadcast untuk raspberrypi gateway<br />
-3.) TRANSMIT_FLOOD_SENSOR : Berisi script untuk arduino <br />
+1.) <b>piGateway</b> : Berisi script python yang dijalankan di raspberry gateway <br />
+2.) <b>SubscriberMQTT</b> : Berisi script python yg dijalankan disisi server untuk menerima raw data yang dikirim / dibroadcast untuk raspberrypi gateway<br />
+3.) <b>TRANSMIT_FLOOD_SENSOR</b> : Berisi script untuk arduino <br />
 
 # FLASH IC ATMEGA328
 Menggunakan USB ASP + ZIP Socket <br />
@@ -41,7 +41,7 @@ Debug MQTT <br />
 Debug di Gateway <br />
 <a href="https://ibb.co/WtbXbgG"><img src="https://i.ibb.co/0tgLghm/TRANSMIT-DATA-GTW.png" alt="TRANSMIT-DATA-GTW" border="0"></a> <br />
 
-Untuk IC menggunakan ATMEGA328 dengan keterangan pinout dibawah ini : <br />
+Untuk IC menggunakan ATMEGA328 dengan keterangan pinout dibawah ini (<b> Warna Biru </b> ) : <br />
 <a href="https://ibb.co/48YY2Xq"><img src="https://i.ibb.co/0CFFK67/68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067.jpg" alt="68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067" border="0"></a><br />
 Pin yang digunakan untuk proyek ini sebagai berikut ini : <br />
 Pin untuk NRF (warna biru) <br />
