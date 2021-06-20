@@ -22,7 +22,7 @@ Untuk menjalankannya ketikan pada terminal perintah berikut ini : <br />
 ````` python piGateway.py ````` <br />
 
 Untuk menjalankan script program untuk subscriber MQTT dan parsing ada didalam folder SubscriberMQTT. Edit account MQTT sesuai server broker yang telah dibuat.<br />
-Didalam script subscriber MQTT ini hanya sampai dengan parsing saja, tidak sampai untuk insert ke dalam database.
+Didalam script subscriber MQTT ini hanya sampai dengan parsing saja, tidak sampai untuk insert ke dalam database. <br />
 ````` python subscriberData.py ````` <br />
 
 Untuk format data yang dikirim lewat MQTT berbentuk RAW, dan diparsing didalam script subscriberData.py <br />
