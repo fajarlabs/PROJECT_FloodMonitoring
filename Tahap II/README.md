@@ -57,7 +57,7 @@ Pin untuk <i>rain gauge sensor</i> pada <b>Pin 6</b>
 
 Untuk desain PCB menggunakan sprintlayout dan sudah terlampir di dalam folder Tahap II dengan nama file PCB_Interface.lay <br />
 Gambar PCB seperti berikut ini: <br />
-<a href="https://ibb.co/GcJhgcD"><img src="https://i.ibb.co/gz7nsz8/PCB-Interface.jpg" alt="PCB-Interface" border="0"></a><br />
+<a href="https://ibb.co/d2hWskj"><img src="https://i.ibb.co/WyTxNBG/PCB-Interface.jpg" alt="PCB-Interface" border="0"></a><br />
 
 Gallery proyek : <br />
 <a href="https://ibb.co/zfkCwdP"><img src="https://i.ibb.co/cTmRdq2/Whats-App-Image-2021-06-20-at-11-57-32-PM-1.jpg" alt="Whats-App-Image-2021-06-20-at-11-57-32-PM-1" border="0"></a><br />
