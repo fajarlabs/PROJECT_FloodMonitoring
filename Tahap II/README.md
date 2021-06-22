@@ -62,16 +62,16 @@ Pin untuk NRF (warna biru) <br />
 Pin untuk <i>rain gauge sensor</i> pada <b>Pin 6</b>
 
 # INPUT WATER LEVEL
-INPUT4 6<br />
-INPUT3 4<br /> 
-INPUT2 3<br />
-INPUT1 2<br />
+INPUT4 : PIN 6<br />
+INPUT3 : PIN 4<br /> 
+INPUT2 : PIN 3<br />
+INPUT1 : PIN 2<br />
 
 # OUTPUT RELAY TRIGGER
-OUTPUT2 12 <b>Optional</b><br />
-OUTPUT2 11 <b>Optional</b><br />
-OUTPUT2 10 <b>Not used</b><br />
-OUTPUT1 9 <b>Not used</b><br />
+OUTPUT2 : PIN 12 <b>Optional</b><br />
+OUTPUT2 : PIN 11 <b>Optional</b><br />
+OUTPUT2 : PIN 10 <b>Not used</b><br />
+OUTPUT1 : PIN 9 <b>Not used</b><br />
 
 Untuk desain PCB menggunakan sprintlayout dan sudah terlampir di dalam folder Tahap II dengan nama file PCB_Interface.lay <br />
 Gambar PCB seperti berikut ini: <br />
