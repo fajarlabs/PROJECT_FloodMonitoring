@@ -49,6 +49,8 @@ Debug di Gateway <br />
 Untuk IC menggunakan ATMEGA328 dengan keterangan pinout dibawah ini (<b> Warna Biru </b> ) : <br />
 <a href="https://ibb.co/nCmdzjr"><img src="https://i.ibb.co/4dtvPpW/68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067.jpg" alt="68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067" border="0"></a><br /><a target='_blank' href='https://id.imgbb.com/'>gambum</a><br /><br />
 Pin yang digunakan untuk proyek ini sebagai berikut ini : <br />
+
+# NRF PIN
 Pin untuk NRF (warna biru) <br />
 <b>Pin 7 </b> : CE <br />
 <b>Pin 8 </b> : CSN <br />
@@ -56,7 +58,20 @@ Pin untuk NRF (warna biru) <br />
 <b>Pin 12</b> : MOSI <br />
 <b>Pin 13</b> : SCK <br />
 
+# RAIN GAUGE PIN
 Pin untuk <i>rain gauge sensor</i> pada <b>Pin 6</b>
+
+# INPUT WATER LEVEL
+INPUT4 6<br />
+INPUT3 4<br /> 
+INPUT2 3<br />
+INPUT1 2<br />
+
+# OUTPUT RELAY TRIGGER
+OUTPUT2 12 <b>Optional</b><br />
+OUTPUT2 11 <b>Optional</b><br />
+OUTPUT2 10 <b>Not used</b><br />
+OUTPUT1 9 <b>Not used</b><br />
 
 Untuk desain PCB menggunakan sprintlayout dan sudah terlampir di dalam folder Tahap II dengan nama file PCB_Interface.lay <br />
 Gambar PCB seperti berikut ini: <br />
