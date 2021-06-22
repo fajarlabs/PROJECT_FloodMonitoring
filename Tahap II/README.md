@@ -11,6 +11,9 @@ Didalam folder tahap II ini terdapat folder script diantaranya, <br />
 Menggunakan USB ASP + ZIP Socket <br />
 <a href="https://imgbb.com/"><img src="https://i.ibb.co/T4M5ph7/USB-ASP.jpg" alt="USB-ASP" border="0"></a> <br />
 
+Untuk librarynya menggunakan "MiniCore" <br />
+<b><a href="https://github.com/MCUdude/MiniCore">MiniCore</a></b> <br />
+
 # Raspberry PI<br />
 Bukan terminal dan tambahkan library paho.mqtt dengan mengetik <br />
 ````` pip install paho-mqtt ````` <br />
