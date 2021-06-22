@@ -68,8 +68,8 @@ L2 : PIN 3<br />
 L1 : PIN 2<br />
 
 # OUTPUT RELAY TRIGGER
-OUTPUT2 : PIN 12 <b>Optional</b><br />
-OUTPUT2 : PIN 11 <b>Optional</b><br />
+OUTPUT4 : PIN 12 <b>Optional, if not using NRF module</b><br />
+OUTPUT3 : PIN 11 <b>Optional, if not using NRF module</b><br />
 OUTPUT2 : PIN 10 <b>Not used</b><br />
 OUTPUT1 : PIN 9 <b>Not used</b><br />
 
