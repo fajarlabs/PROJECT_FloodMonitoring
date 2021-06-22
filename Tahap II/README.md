@@ -44,7 +44,7 @@ Debug di Gateway <br />
 <a href="https://ibb.co/WtbXbgG"><img src="https://i.ibb.co/0tgLghm/TRANSMIT-DATA-GTW.png" alt="TRANSMIT-DATA-GTW" border="0"></a> <br />
 
 Untuk IC menggunakan ATMEGA328 dengan keterangan pinout dibawah ini (<b> Warna Biru </b> ) : <br />
-<a href="https://ibb.co/48YY2Xq"><img src="https://i.ibb.co/0CFFK67/68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067.jpg" alt="68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067" border="0"></a><br />
+<a href="https://ibb.co/nCmdzjr"><img src="https://i.ibb.co/4dtvPpW/68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067.jpg" alt="68747470733a2f2f692e696d6775722e636f6d2f715849456368542e6a7067" border="0"></a><br /><a target='_blank' href='https://id.imgbb.com/'>gambum</a><br /><br />
 Pin yang digunakan untuk proyek ini sebagai berikut ini : <br />
 Pin untuk NRF (warna biru) <br />
 <b>Pin 7 </b> : CE <br />
