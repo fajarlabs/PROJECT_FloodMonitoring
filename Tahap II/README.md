@@ -62,10 +62,10 @@ Pin untuk NRF (warna biru) <br />
 Pin untuk <i>rain gauge sensor</i> pada <b>Pin 6</b>
 
 # INPUT WATER LEVEL
-INPUT4 : PIN 6<br />
-INPUT3 : PIN 4<br /> 
-INPUT2 : PIN 3<br />
-INPUT1 : PIN 2<br />
+L4 : PIN 6<br />
+L3 : PIN 4<br /> 
+L2 : PIN 3<br />
+L1 : PIN 2<br />
 
 # OUTPUT RELAY TRIGGER
 OUTPUT2 : PIN 12 <b>Optional</b><br />
